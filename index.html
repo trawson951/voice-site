@@ -137,10 +137,28 @@ outline-offset: 0.125rem;
   will-change:transform;
   transform: scale(1.02);
   animation: zoom 20s ease-in-out infinite alternate;
+  background-position: 60% 50%;
 }
 
 @media (prefers-reduced-motion: reduce){
   .hero::before{animation:none}
+}
+
+@media (max-width: 48rem) {
+  .hero { 
+    min-height: clamp(20rem, 70vh, 36rem);
+  }
+  .hero::before{
+    background-position: 86% 50%;  
+    transform-origin: 86% 50%;     
+  }
+}
+
+@media (max-width: 23.5rem){
+  .hero::before{
+    background-position: 90% 50%;
+    transform-origin: 90% 50%;
+  }
 }
 
 @keyframes zoom {
