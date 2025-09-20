@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thomasrawsonstudio.com/sitemap.xml
+Sitemap: https://lisarawsonstudio.com/sitemap.xml
