@@ -732,6 +732,12 @@ header {
 /* Optional: keep the headshot corners perfect with the new border */
 .headshot{ border-radius: 1rem; overflow: hidden; }
 .headshot img{ border-radius: inherit; }
+@media (max-width: 640px) {
+  .lead {
+    color: #fff;            /* force white */
+    text-shadow: 0 0.06rem 0.3rem rgba(0,0,0,0.6); /* keep readability */
+  }
+}
 
   </style>
 </head>
