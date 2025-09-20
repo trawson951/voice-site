@@ -662,6 +662,76 @@ header {
     0 0.2rem 0.5rem rgba(0,0,0,0.2);
   background: #f0f0f0;
 }
+/* ===== Mobile header fix (keep pills on one line, right-aligned) ===== */
+@media (max-width: 640px) {
+  .header { padding: .35rem 0; }
+  .nav { gap: .5rem; }
+
+  /* brand on the left, pills on the right, no wrap */
+  .brand { flex: 1 1 auto; min-width: 0; }
+  .brand h3 { font-size: 1rem; line-height: 1.05; }
+
+  .nav > nav {
+    display: flex;
+    gap: .4rem;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+    white-space: nowrap;              /* prevent wrapping */
+  }
+
+  .nav a.btn,
+  .nav a.btn.ghost {
+    padding: .42em .75em;             /* smaller pills */
+    font-size: .9rem;
+    border-radius: 1.25rem;
+    backdrop-filter: blur(8px) saturate(140%);
+    -webkit-backdrop-filter: blur(8px) saturate(140%);
+  }
+}
+
+/* Keep the header readable over anything while scrolling */
+.header{
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(20,20,20,.55);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+          backdrop-filter: blur(10px) saturate(150%);
+  border-bottom: 1px solid rgba(255,255,255,.20);
+}
+
+/* ===== Hero overlay: lighten on mobile (remove the solid .7) ===== */
+.hero::after{
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,.22) 0%,
+    rgba(0,0,0,.18) 45%,
+    rgba(0,0,0,.12) 100%
+  );
+}
+@media (max-width: 640px){
+  .hero::after{
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,.20) 0%,
+      rgba(0,0,0,.16) 50%,
+      rgba(0,0,0,.10) 100%
+    );                                 /* softer, no blackout */
+  }
+
+  /* a touch more space below fixed header */
+  .hero{
+    padding-top: calc(3.5rem + env(safe-area-inset-top));
+  }
+
+  /* tighten hero typography a bit on phones */
+  .hero-title{ font-size: clamp(2.1rem, 8vw, 3rem); }
+  .tagline{ font-size: clamp(1.05rem, 4.2vw, 1.25rem); }
+  .lead{ font-size: .98rem; }
+}
+
+/* Optional: keep the headshot corners perfect with the new border */
+.headshot{ border-radius: 1rem; overflow: hidden; }
+.headshot img{ border-radius: inherit; }
 
   </style>
 </head>
