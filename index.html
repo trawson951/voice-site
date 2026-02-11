@@ -103,6 +103,9 @@
       rgba(0,0,0,.55) 45%,
       rgba(0,0,0,.78) 100%);
   }
+  p{ color: var(--muted) !important; }
+  .card h2{ color: var(--ink) !important; }
+  .card{ color: var(--ink) !important; }
 }
 
 
@@ -341,7 +344,7 @@ h1, h2, h3 {
 }
 p {
   font-family: "Inter", sans-serif;
-  color: #ccc;
+  color: var(--muted);
   line-height: 1.75;
 }
 
@@ -371,7 +374,7 @@ p {
   font-size: 1.05rem;
   margin-bottom: .65rem;
   letter-spacing: .015em;
-  color: var(--accent);
+  color: color-mix(in oklab, var(--ink), #000 8%);
 }
 
 h2{margin:.5rem 0 .75rem;font-size:clamp(1.1rem,2.2vw,1.35rem)}
@@ -452,16 +455,17 @@ audio::-webkit-media-controls-mute-button { filter: grayscale(100%) brightness(1
   max-width: 40rem;
   margin: 0.5rem auto;
   margin-bottom: 1.5rem;
+  color: var(--ink);
 }
 .contact-card h2 {
   margin-top: 0;
   margin-bottom: 0.75rem;
   font-size: 1.6rem;
-  color: var(--ink);
+  color: var(--muted);
 }
 .contact-card p {
   margin: 0.5rem 0;
-  color: var(--muted);
+  color: var(--ink);
   font-size: 1rem;
 }
 .contact-card a {
