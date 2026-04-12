@@ -63,25 +63,24 @@
 
 @media (prefers-color-scheme: light){
   :root{
-    --bg:#f3efe9;
-    --bg-2:#e8e3dc;
-    --ink:#2b2622;
-    --muted:#6b625b;
-    --accent:#3b332d;
-    --accent-2:#5a5048;
-    --card:rgba(255,255,255,0.85);
-    --ring:#cfc6bc;
-    --shadow:0 .6rem 1.8rem rgba(0,0,0,.08);
+    --bg:#221f1c;
+    --bg-2:#2c2824;
+    --ink:#f4f1ee;
+    --muted:#c4beb8;
+    --accent:#efeae5;
+    --accent-2:#d8d2cb;
+    --card:rgba(56,52,48,0.88);
+    --ring:#e5dfd8;
+    --shadow:0 .6rem 1.8rem rgba(0,0,0,.22);
   }
-  
 
-  body{
+  body,
+  .header,
+  footer{
     background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
-    background: linear-gradient(180deg,
-      var(--bg) 0%,
-      var(--bg-2) 100%);
   }
-   .hero{
+
+  .hero{
     color:#f5f2ee;
   }
 
@@ -103,6 +102,7 @@
       rgba(0,0,0,.55) 45%,
       rgba(0,0,0,.78) 100%);
   }
+
   .card{ color: var(--ink) !important; }
 }
 
@@ -115,11 +115,6 @@ body{
   color:var(--ink);
   font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
-  background: linear-gradient(180deg,
-    color-mix(in oklab, var(--bg), #fff 6%) 0%,
-    color-mix(in oklab, var(--bg), var(--bg-2) 45%) 35%,
-    color-mix(in oklab, var(--bg-2), #fff 7%) 72%,
-    var(--bg-2) 100%);
 }
 a{color:var(--accent);text-decoration:none;text-underline-offset:.18rem}
 a:hover{text-decoration:underline}
@@ -130,11 +125,6 @@ a:hover{text-decoration:underline}
   position:sticky;top:0;z-index:50;
   backdrop-filter:saturate(115%) blur(.5rem);
   background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
-  background: linear-gradient(180deg,
-    color-mix(in oklab, var(--bg), #fff 6%) 0%,
-    color-mix(in oklab, var(--bg), var(--bg-2) 45%) 35%,
-    color-mix(in oklab, var(--bg-2), #fff 7%) 72%,
-    var(--bg-2) 100%);
   -webkit-backdrop-filter: saturate(115%) blur(0.5rem);  
           backdrop-filter: saturate(115%) blur(0.5rem);  
   border-bottom: 0.0625rem solid rgba(255,255,255,.08);  
@@ -590,11 +580,6 @@ footer {
   font-size: clamp(.8rem,1.4vw,.95rem);
   text-align: center;
   background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
-  background: linear-gradient(180deg,
-    color-mix(in oklab, var(--bg), #fff 6%) 0%,
-    color-mix(in oklab, var(--bg), var(--bg-2) 45%) 35%,
-    color-mix(in oklab, var(--bg-2), #fff 7%) 72%,
-    var(--bg-2) 100%);
   border-top: 1px solid rgba(255,255,255,.08);
   box-shadow: 0 -0.25rem 1rem rgba(0,0,0,.3) inset;
   position: relative;
@@ -697,11 +682,6 @@ background:linear-gradient(to bottom, rgba(0,0,0,.06), rgba(0,0,0,0));
 
 footer{
   background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
-  background: linear-gradient(180deg,
-    color-mix(in oklab, var(--bg), #fff 6%) 0%,
-    color-mix(in oklab, var(--bg), var(--bg-2) 45%) 35%,
-    color-mix(in oklab, var(--bg-2), #fff 7%) 72%,
-    var(--bg-2) 100%);
   color:#cbd2d8;
 }
 footer a{ color:#e2e6ea; }
@@ -763,11 +743,6 @@ a:focus-visible, .btn:focus-visible{
 
 footer{
   background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
-  background: linear-gradient(180deg,
-    color-mix(in oklab, var(--bg), #fff 6%) 0%,
-    color-mix(in oklab, var(--bg), var(--bg-2) 45%) 35%,
-    color-mix(in oklab, var(--bg-2), #fff 7%) 72%,
-    var(--bg-2) 100%);
   color:#cbd2d8;
 }
 footer a{ color:#e2e6ea; }
