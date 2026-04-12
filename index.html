@@ -423,6 +423,27 @@ p, .lead {
   box-shadow: 0 .9rem 2.1rem rgba(0,0,0,.5),
               0 0 0 0.0625rem rgba(255,255,255,.06) inset;
 }
+
+
+.video-wrap {
+  background: linear-gradient(180deg,#1d1a18,#0f0e0d);
+  border: 1px solid rgba(255, 240, 225, 0.08);
+  border-radius: 0.65rem;
+  padding: .35rem;
+  box-shadow: 0 .25rem .75rem rgba(0,0,0,.35);
+  margin-bottom: 0.75rem;
+}
+.video-wrap video {
+  width: 100%;
+  display: block;
+  border-radius: .5rem;
+  background: #000;
+  aspect-ratio: 16 / 9;
+}
+.video-demos {
+  padding-top: 0;
+  margin-top: 1.25rem;
+}
 audio::-webkit-media-controls-timeline,
 audio::-webkit-media-controls-volume-slider{background:rgba(255,255,255,.10)}
 audio::-webkit-media-controls-enclosure {  background: none !important;
@@ -995,6 +1016,38 @@ I bring a calm and thoughtful presence to every narration, offering a voice that
     ⬇ Download MP3
   </a>
 </div>
+      </div>
+    </section>
+
+    <section class="section grid cols-2 no-sep video-demos" aria-label="Video demos">
+      <div class="card fade" role="region" aria-label="Echoes of Library Halls Documentary">
+        <h2>Echoes of Library Halls Documentary</h2>
+        <div class="video-wrap">
+          <video controls preload="metadata">
+            <source src="Video\(c) Echoes of Library Halls Documentary Demo Reel.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="dl-row">
+          <a href="Video\(c) Echoes of Library Halls Documentary Demo Reel.mp4" download="Video\(c) Echoes of Library Halls Documentary Demo Reel_Lisa Rawson" class="btn ghost-sm">
+            ⬇ Download MP4
+          </a>
+        </div>
+      </div>
+
+      <div class="card fade" role="region" aria-label="Non-profit Support_Lisa Rawson">
+        <h2>Non-profit Support</h2>
+        <div class="video-wrap">
+          <video controls preload="metadata">
+            <source src="Video\(c) Non-profit Support Demo Reel.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="dl-row">
+          <a href="Video\(c) Non-profit Support Demo Reel.mp4" download="Video\(c) Non-profit Support Demo Reel.mp4" class="btn ghost-sm">
+            ⬇ Download MP4
+          </a>
+        </div>
       </div>
     </section>
 
